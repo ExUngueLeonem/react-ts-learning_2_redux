@@ -1,8 +1,24 @@
 export interface UserState {
-    users: any[];
+    users: UserItem[];
     loading: boolean;
     error: null | string;
 }
+
+interface UserItem {
+address: { 
+    city: string;
+    street: string;
+    suite: string;
+    };
+email: string;
+id: 1;
+name: string;
+phone: string;
+username: string;
+website: string;
+}
+
+//написать тип для UserItem
 
 export const enum UserActionTypes {
     FETCH_USERS = "FETCH_USERS",
@@ -16,7 +32,7 @@ interface FetchUsersAction {
 
 interface FetchUsersActionSuccess {
     type: UserActionTypes.FETCH_USERS_SUCCESS;
-    payload: any[];
+    payload: UserItem[];
 }
 
 interface FetchUsersActionError {
