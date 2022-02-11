@@ -1,5 +1,5 @@
 export interface TodoState {
-    todos: [];
+    todos: any[];
     loading: boolean;
     error: null | string;
     page: number;
@@ -23,7 +23,8 @@ interface FetchTodoSuccessAction {
 }
 
 interface FetchTodoErrorAction {
-    type: TodoActionTypes.FETCH_TODO_ERROR 
+    type: TodoActionTypes.FETCH_TODO_ERROR;
+    payload: string; 
 }
 
 interface SetTodoPageAction {
