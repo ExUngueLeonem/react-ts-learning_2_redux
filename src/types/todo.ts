@@ -6,6 +6,8 @@ export interface TodoState {
     limit: number;
 }
 
+//TodoItem
+
 export enum TodoActionTypes {
     FETCH_TODO = 'FETCH_TODO',
     FETCH_TODO_ERROR = 'FETCH_TODO_ERROR',
